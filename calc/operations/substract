@@ -1,0 +1,13 @@
+package operations
+
+import "fmt"
+
+func substract(a int, b int) int {
+	fmt.Println("Subtraindo %d - %d\n", a, b)
+	return a - b
+}
+
+//Para torar na função publica/exportadora é necessário colocar a primeiro letra em maiúsculo.
+func Substract(a int, b int) int {
+	return substract(a, b)
+}

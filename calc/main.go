@@ -1,36 +1,22 @@
 package main
 
-import "fmt"
-
-func sum(a int, b int) int {
-	return a + b
-}
-
-func multiply(a int, b int) int {
-	return a * b
-}
-
-func divide(a int, b int) int {
-	return a / b
-}
-
-func substract(a int, b int) int {
-	return a - b
-}
+import ("fmt"
+       "D:\Josane\Linuxtips\Go_Essentials\go-essentials\calc\operations"
+)
 
 func main() {
 	fmt.Println("Calculadora #GoEssentiais")
 
-	result := sum(5, 10) //criação e atribuição
+	result := operations.Sum(5, 10) //criação e atribuição da variável
 	fmt.Println(result)
 
-	result = divide(10, 5) //só atribuindo
+	result = operations.Divide(10, 5) //só atribuindo
 	fmt.Println(result)
 
-	result = multiply(5, 5) //só atribuindo
+	result = operations.Multiply(5, 5) //só atribuindo
 	fmt.Println(result)
 
-	result = substract(50, 10) //só atribuindo
+	result = operations.Substract(50, 10) //só atribuindo
 	fmt.Println(result)
 
 }
