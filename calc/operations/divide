@@ -1,13 +1,24 @@
 package operations
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
-func divide(a int, b int) int {
+//func divide(a int, b int) int {
+//	fmt.Println("Dividindo %d / %d\n", a, b)
+//	if b == 0 {
+//		panic("Divisão por zero não é permitida")
+//	}
+//	return a / b
+//}
+
+// Para torar na função publica/exportadora é necessário colocar a primeiro letra em maiúsculo.
+func Divide(a int, b int) (int, error) {
 	fmt.Println("Dividindo %d / %d\n", a, b)
-	return a / b
-}
-
-//Para torar na função publica/exportadora é necessário colocar a primeiro letra em maiúsculo.
-func Divide(a int, b int) int {
-	return divide(a, b)
+	if b == 0 {
+		err := errors.New("Divisão por zero não é permitida")
+		return 0, err
+	}
+	return a / b, nil
 }
